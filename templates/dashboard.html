@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- ============================================================== -->
+<!-- Page wrapper  -->
+<!-- ============================================================== -->
+
+<div class="page-wrapper">
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <div class="row">
+        <!-- column -->
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Marca más comprada:</h4>
+                    <div class="flot-chart">
+                        <div class="flot-chart-content" id="grafico_1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- column -->
+        <!-- column -->
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Precios más vendidos:</h4>
+                    <div class="flot-chart">
+                        <div class="flot-chart-content" id="grafico_2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- column -->
+        <!-- column -->
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Ventas últimos 7 días</h4>
+                    <div class="flot-chart">
+                        <!-- <div class="flot-chart-content" id="myChart"></div> -->
+                        <canvas class="flot-chart-content" id="grafico_3" height="400px"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- column -->
+         <!-- column -->
+         <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Reporte Mensual Ventas</h4>
+                    <div class="flot-chart">
+                        <!-- <div class="flot-chart-content" id="myChart"></div> -->
+                        <canvas class="flot-chart-content" id="grafico_4" height="400px"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- column -->
+        <!-- column -->
+        <!-- <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">{{texto}}</h4>
+                    <div class="demo-container" style="height:400px;">
+                        <div id="placeholder" class="flot-chart-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- column -->
+        <!-- column -->
+        <!-- <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Line Chart</h4>
+                    <div class="flot-chart">
+                        <div class="flot-chart-content" id="flot-line-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- column -->
+        <!-- column -->
+        <!-- <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Pie Chart</h4>
+                    <div class="flot-chart">
+                        <div class="flot-chart-content" id="flot-pie-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- column -->
+        <!-- column -->
+        <!-- <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Moving Line Chart Example</h4>
+                    <div class="flot-chart">
+                        <div class="flot-chart-content" id="flot-line-chart-moving"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- column -->
+        <!-- column -->
+        <!-- <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Bar Chart</h4>
+                    <div class="flot-chart">
+                        <div class="flot-chart-content" id="flot-bar-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- column -->
+        <!-- column -->
+        <!-- <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Sales Bar Chart</h4>
+                    <div class="flot-chart">
+                        <div class="sales-bars-chart" style="height: 320px;"> </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- column -->
+
+    </div>
+
+
+
+
+
+    <!-- ============================================================== -->
+    <!-- End PAge Content -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->
+{% endblock%}
