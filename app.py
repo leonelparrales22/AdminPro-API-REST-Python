@@ -9,12 +9,26 @@ from flaskext.mysql import MySQL
 app = Flask(__name__)
 
 # DATABASE CONFIG
+# Local
+# mysql = MySQL()
+# app.config['MYSQL_DATABASE_USER'] = 'root'
+# app.config['MYSQL_DATABASE_PASSWORD'] = '123456'
+# app.config['MYSQL_DATABASE_DB'] = 'bdd'
+# app.config['MYSQL_DATABASE_Host'] = 'localhost'
+# mysql.init_app(app)
+
+# Remota
 mysql = MySQL()
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = '1234567'
-app.config['MYSQL_DATABASE_DB'] = 'bdd'
-app.config['MYSQL_DATABASE_Host'] = 'localhost'
+app.config['MYSQL_DATABASE_HOST'] = '85.10.205.173'
+app.config['MYSQL_DATABASE_USER'] = 'leonelparrales22'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'Pinguino2233'
+app.config['MYSQL_DATABASE_DB'] = 'adminpro'
+app.config['MYSQL_DATABASE_PORT'] = 3306
 mysql.init_app(app)
+
+
+
+
 # DATABSE CONNECTION
 conn = mysql.connect()
 cursor = conn.cursor()
