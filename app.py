@@ -222,7 +222,7 @@ def calcular_reporte_ventas_mensual():
 
 
 def machine_learning():
-    data = pd.read_csv('files/pronostico.csv', sep=',')
+    data = pd.read_csv('files/pronostico_Agosto.csv', sep=',')
     data = data.values
     y = []
     for x in data:
