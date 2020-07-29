@@ -39,6 +39,20 @@ function g4(grafico) {
   crear_barra("grafico_4", labels, info);
 }
 
+function g5(grafico) {
+  data = JSON.parse(grafico);
+  console.log(data);
+  labels = [];
+  info = [];
+  data.forEach((element) => {
+    labels.push("Día " + element.dia);
+    info.push(element.valor);
+  });
+  console.log(labels);
+  console.log(info);
+  crear_barra("grafico_5", labels, info);
+}
+
 function crear_dona(nombre_id) {
   var plotObj = $.plot($(nombre_id), data, {
     series: {
