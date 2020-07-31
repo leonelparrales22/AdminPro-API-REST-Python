@@ -172,7 +172,8 @@ def calcular_rango_celulares_mas_vendido():
 
 def calcular_reporte_ventas_semanal():
     cursor.execute(
-        "SELECT DATE_FORMAT(fecha, '%Y-%m-%d') AS FECHA, SUM(CELULARES.precio_celular*DETALLE_VENTA.cantidad) AS TOTAL FROM VENTAS, DETALLE_VENTA, CELULARES WHERE fecha BETWEEN CURDATE() - INTERVAL 7 DAY AND CURDATE() AND VENTAS.codigo_venta = DETALLE_VENTA.codigo_venta AND DETALLE_VENTA.id_celular = CELULARES.id_celular GROUP BY FECHA ORDER BY `FECHA` ASC")
+        # "SELECT DATE_FORMAT(fecha, '%Y-%m-%d') AS FECHA, SUM(CELULARES.precio_celular*DETALLE_VENTA.cantidad) AS TOTAL FROM VENTAS, DETALLE_VENTA, CELULARES WHERE fecha BETWEEN CURDATE() - INTERVAL 7 DAY AND CURDATE() AND VENTAS.codigo_venta = DETALLE_VENTA.codigo_venta AND DETALLE_VENTA.id_celular = CELULARES.id_celular GROUP BY FECHA ORDER BY `FECHA` ASC")
+        "SELECT DATE_FORMAT(fecha, '%Y-%m-%d') AS FECHA, SUM(CELULARES.precio_celular * DETALLE_VENTA.cantidad) AS TOTAL FROM VENTAS, DETALLE_VENTA, CELULARES WHERE fecha BETWEEN CURDATE() - INTERVAL 6 DAY AND "2020-08-01" AND VENTAS.codigo_venta = DETALLE_VENTA.codigo_venta AND DETALLE_VENTA.id_celular = CELULARES.id_celular GROUP BY FECHA ORDER BY `FECHA` ASC")
     data = cursor.fetchall()
     current_date = date.today()
     fechas = [1, 2, 3, 4, 5, 6, 7]
